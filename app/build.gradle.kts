@@ -79,4 +79,16 @@ dependencies {
 
     // Coil para carregar imagens dos avatares
     implementation("io.coil-kt:coil-compose:2.2.2")
+
+    // Gson para serialização JSON
+    implementation("com.google.code.gson:gson:2.10.1")
+
+    // Coroutines para chamadas assíncronas
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+
+    // OkHttp para interceptação de chamadas
+    implementation ("com.squareup.okhttp3:logging-interceptor:4.9.3")
+
+
+
 }
