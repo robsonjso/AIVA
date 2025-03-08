@@ -16,6 +16,10 @@ android {
         versionCode = 1
         versionName = "1.0"
 
+        // Habilita o BuildConfig para armazenar a API Key
+        buildConfigField("String", "OPENAI_API_KEY", "\"" + (project.findProperty("OPENAI_API_KEY") ?: "") + "\"")
+
+
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -26,8 +30,22 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            buildConfigField(
+                "String",
+                "OPENAI_API_KEY",
+                "\"" + (project.findProperty("OPENAI_API_KEY") ?: "") + "\""
+            )
+        }
+        debug {
+            buildConfigField(
+                "String",
+                "OPENAI_API_KEY",
+                "\"" + (project.findProperty("OPENAI_API_KEY") ?: "") + "\""
+            )
         }
     }
+
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -36,7 +54,7 @@ android {
         jvmTarget = "11"
     }
     buildFeatures {
-        compose = true
+        buildConfig = true
     }
 }
 
