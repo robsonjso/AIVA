@@ -11,3 +11,4 @@ interface OpenAIService {
     @POST("v1/chat/completions")
     suspend fun getChatResponse(@Body request: OpenAIRequest): OpenAIResponse
 }
+
