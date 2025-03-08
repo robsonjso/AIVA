@@ -1,4 +1,4 @@
-package com.example.aiva.ui.theme
+package com.example.aiva.core.ui.theme
 
 import android.app.Activity
 import android.os.Build
